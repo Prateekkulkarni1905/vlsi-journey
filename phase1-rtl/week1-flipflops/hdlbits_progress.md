@@ -17,10 +17,40 @@ Wrong:   b ^ sub
 Correct: b ^ {8{sub}}
 This same pattern used in 32-bit ALU: b ^ {32{sub}}
 
-## Sequential Logic — Starting Day 2 (March 10)
-- Dff          — pending
-- Dff8         — pending
-- Dff8r        — pending
-- Dff8p        — pending
-- Dff8ar       — pending
-- Dffsr        — pending
+## Procedures (Day 2 — March 10)
+- alwaysblock1 ✅, alwaysblock2 ✅
+- always_if ✅, always_if2 ✅
+- always_case ✅, always_case2 ✅ (5 attempts — casez ? syntax)
+- always_casez ✅, always_nolatches ✅
+- conditional ✅
+
+## Flip-Flops on HDLBits (Day 2 — March 10)
+- dff ✅, dff8 ✅
+- dff8r ✅ (synchronous reset)
+- dff8p ✅ (active low — if (!rst))
+- dff8ar ✅ (async — posedge rst in sensitivity list)
+- dff16e ✅ (byte enable)
+
+## Total problems completed: 43
+
+## Key Lessons — Day 2
+
+1. Async vs Sync reset — one line difference changes everything
+   Sync:  always @(posedge clk)
+   Async: always @(posedge clk or posedge rst)
+
+2. Active-low reset — if (!rst) not if (rst)
+   Caught me on dff8p — read problem carefully before coding
+
+3. Accidental latch inference
+   Happens when output unassigned in some branch of combinational always block
+   Fix: assign default value at TOP of always block before if/case begins
+   always_nolatches taught this clearly
+
+4. casez don't care syntax
+   4'b1??? — ? means don't care, matches any value in that bit position
+   Used in priority encoders — highest priority case listed first
+
+5. Byte enable register (dff16e)
+   Only updates specific bytes when enable signal is high
+   Direct connection to AXI4-Lite write strobes in Project 2
