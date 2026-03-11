@@ -54,3 +54,14 @@ This same pattern used in 32-bit ALU: b ^ {32{sub}}
 5. Byte enable register (dff16e)
    Only updates specific bytes when enable signal is high
    Direct connection to AXI4-Lite write strobes in Project 2
+
+
+   ## Exam Style + Shift Registers (Day 3 — March 11)
+- exams/m2014_q4a ✅ (4 attempts — exam style)
+- exams/m2014_q4d ✅ (100% first try)
+- mt2015_muxdff ✅ (17% — misread scope, wrote full chain instead of one unit)
+- exams/2014_q4a ✅ (100% first try)
+- shift4 ✅ (compile errors on shift syntax)
+- rotate100 ✅ (rotation logic)
+
+## Total problems completed: 49 — 100% solved
