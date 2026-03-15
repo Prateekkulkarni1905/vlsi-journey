@@ -72,3 +72,14 @@ More the hard work, better the results.
 - alu_dataflow.v + tb  
 - alu_structural.v + tb
 - day6_notes.md
+
+# 4-bit ALU PPA Results — Yosys Synthesis
+Date: March 15, 2026
+
+| Style       | Cell Count | Notes              |
+|-------------|------------|--------------------|
+| Behavioural | 150        | case(opcode) style |
+| Dataflow    | 104        | Lowest — best PPA  |
+| Structural  | 130        | Post-flatten       |
+
+Conclusion: Dataflow achieves 30.7% fewer cells than behavioural.
