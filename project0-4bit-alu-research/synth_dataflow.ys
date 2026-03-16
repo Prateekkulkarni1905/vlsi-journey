@@ -1,0 +1,9 @@
+read_verilog alu_dataflow.v
+hierarchy -top ALU_4bit
+proc
+opt
+techmap
+opt
+stat
+write_verilog -noattr netlist_dataflow.v
+show -format png -prefix alu_dataflow_circuit

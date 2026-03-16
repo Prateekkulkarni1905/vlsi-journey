@@ -1,0 +1,10 @@
+read_verilog alu_structural.v
+hierarchy -top ALU_4bit
+proc
+opt
+flatten
+techmap
+opt
+stat
+write_verilog -noattr netlist_structural.v
+show -format png -prefix alu_structural_circuit

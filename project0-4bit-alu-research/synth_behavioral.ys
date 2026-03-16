@@ -1,0 +1,9 @@
+read_verilog alu_behavioral.v
+hierarchy -top ALU_4bit
+proc
+opt
+techmap
+opt
+stat
+write_verilog -noattr netlist_behavioral.v
+show -format png -prefix alu_behavioral_circuit
