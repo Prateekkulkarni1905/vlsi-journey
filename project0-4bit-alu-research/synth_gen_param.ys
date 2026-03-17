@@ -1,0 +1,12 @@
+read_verilog alu_gen_param.v
+hierarchy -check -top ALU_4bit
+proc
+stat
+opt
+techmap
+opt
+stat
+ltp
+synth_ice40 -top ALU_4bit
+stat
+
