@@ -23,9 +23,9 @@ open-source Yosys synthesis tool.
 | 010    | AND         |
 | 011    | OR          |
 | 100    | XOR         |
-| 101    | NOT (A)     |
-| 110    | Left Shift  |
-| 111    | Right Shift |
+| 101    | Left Shift  |
+| 110    | Right Shift |
+| 111    | Compare     |
 
 ---
 
