@@ -36,7 +36,7 @@ open-source Yosys synthesis tool.
 | `alu_behavioural.v`  | Behavioural  | case() based opcode selection        |
 | `alu_dataflow.v`     | Dataflow     | Conditional/ternary operators        |
 | `alu_structural.v`   | Structural   | Gate primitives, full adder instances|
-| `alu_tb.v`           | Testbench    | Verifies all 3 implementations       |
+| `tb.v`           | Testbench    | Verifies all 3 implementations       |
 
 ---
 
